@@ -51,6 +51,14 @@ describe 'String#calculate_hour_angle' do
     # 3 hours
     hour_angle2 = @obj.send(:calculate_hour_angle, 3)
     expect(hour_angle2).to(eq(90))
+
+    # 11 hours
+    hour_angle3 = @obj.send(:calculate_hour_angle, 11)
+    expect(hour_angle3).to(eq(330))
+
+    # 12 hours
+    hour_angle4 = @obj.send(:calculate_hour_angle, 12)
+    expect(hour_angle4).to(eq(0))
   end
 end
 

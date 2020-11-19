@@ -13,7 +13,7 @@ class String
   private
 
   def calculate_hour_angle(hour)
-    hour * 30
+    hour === 12 ? 0 : hour * 30
   end
 
   def calculate_minute_angle(minute)
