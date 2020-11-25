@@ -23,20 +23,24 @@ describe 'String#calculate_minute_angle' do
     @obj = String.new
 
     # 0 minutes
-    minute_angle = @obj.send(:calculate_minute_angle, 0)
-    expect(minute_angle).to(eq(0))
+    minute_0 = @obj.send(:calculate_minute_angle, 0)
+    expect(minute_0).to(eq(0))
+
+    # 1 minute
+    minute_1 = @obj.send(:calculate_minute_angle, 1)
+    expect(minute_1).to(eq(6))
 
     # 30 minutes
-    minute_angle2 = @obj.send(:calculate_minute_angle, 30)
-    expect(minute_angle2).to(eq(180))
+    minute_30 = @obj.send(:calculate_minute_angle, 30)
+    expect(minute_30).to(eq(180))
 
     # 59 minutes
-    minute_angle3 = @obj.send(:calculate_minute_angle, 59)
-    expect(minute_angle3).to(eq(354))
+    minute_59 = @obj.send(:calculate_minute_angle, 59)
+    expect(minute_59).to(eq(354))
 
     # 60 minutes
-    minute_angle4 = @obj.send(:calculate_minute_angle, 60)
-    expect(minute_angle4).to(eq(0))
+    minute_60 = @obj.send(:calculate_minute_angle, 60)
+    expect(minute_60).to(eq(0))
   end
 end
 
@@ -45,20 +49,24 @@ describe 'String#calculate_hour_angle' do
     @obj = String.new
 
     # 0 hours
-    hour_angle = @obj.send(:calculate_hour_angle, 0)
-    expect(hour_angle).to(eq(0))
+    hour_0 = @obj.send(:calculate_hour_angle, 0)
+    expect(hour_0).to(eq(0))
+
+    # 1 hour
+    hour_1 = @obj.send(:calculate_hour_angle, 1)
+    expect(hour_1).to(eq(30))
 
     # 3 hours
-    hour_angle2 = @obj.send(:calculate_hour_angle, 3)
-    expect(hour_angle2).to(eq(90))
+    hour_3 = @obj.send(:calculate_hour_angle, 3)
+    expect(hour_3).to(eq(90))
 
     # 11 hours
-    hour_angle3 = @obj.send(:calculate_hour_angle, 11)
-    expect(hour_angle3).to(eq(330))
+    hour_11 = @obj.send(:calculate_hour_angle, 11)
+    expect(hour_11).to(eq(330))
 
     # 12 hours
-    hour_angle4 = @obj.send(:calculate_hour_angle, 12)
-    expect(hour_angle4).to(eq(0))
+    hour_12 = @obj.send(:calculate_hour_angle, 12)
+    expect(hour_12).to(eq(0))
   end
 end
 
