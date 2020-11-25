@@ -8,6 +8,8 @@ class String
 
     hour_angle = calculate_hour_angle(arr[0].to_i)
     minute_angle = calculate_minute_angle(arr[1].to_i)
+
+    (minute_angle - hour_angle).abs
   end
 
   private
